@@ -44,6 +44,12 @@ typedef struct _FcitxNotificationItem {
     MenuIdSet *ids;
 } FcitxNotificationItem;
 
+typedef struct _FcitxNotificationItem2 {
+    struct _FcitxNotificationItem  notificationitem;
+    int pendingActionId2;
+} FcitxNotificationItem2;
+
+
 boolean FcitxDBusMenuCreate(FcitxNotificationItem* notificationitem);
 
 MenuIdSet* MenuIdSetAdd(MenuIdSet *ids, int id);
